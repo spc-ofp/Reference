@@ -37,8 +37,6 @@ namespace Reference.DAL.Maps
             Map(x => x.EndDate).Column("end_date");
             Map(x => x.EnteredBy).Column("enteredby");
             Map(x => x.Uvi).Column("uvi");
-
-
         }
     }
 }

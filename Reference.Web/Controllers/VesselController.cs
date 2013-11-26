@@ -28,9 +28,9 @@ namespace Reference.Web.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Vessel Get(int id)
         {
-            return "value";
+            return _repository.Get<Vessel>(id);
         }
 
         // POST api/values
@@ -39,8 +39,9 @@ namespace Reference.Web.Controllers
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Vessel value)
         {
+            _repository.SaveOrUpdate<Vessel>(value);
         }
 
         // DELETE api/values/5
