@@ -24,7 +24,7 @@ namespace Reference.Web.Controllers
         public IEnumerable<Vessel> Get()
         {
             //return new string[] { "value1", "value2" };
-            return _repository.GetAll<Vessel>();//.Select(x => x.Name);
+            return _repository.GetAll<Vessel>().Take(10);//.Select(x => x.Name);
         }
 
         // GET api/values/5
