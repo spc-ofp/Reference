@@ -41,12 +41,15 @@ namespace Reference.Web.Controllers
         // PUT api/values/5
         public void Put(int id, [FromBody]Vessel value)
         {
+            Vessel myVessel = _repository.Get<Vessel>(id);
             _repository.SaveOrUpdate<Vessel>(value);
         }
 
         // DELETE api/values/5
         public void Delete(int id)
         {
+            Vessel vessel = _repository.Get<Vessel>(id);
+            _repository.Delete<Vessel>(vessel);
         }
     }
 }
